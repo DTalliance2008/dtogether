@@ -6,14 +6,6 @@
     android:orientation="vertical"
     android:background="@drawable/login_bg" >
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_dt"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center">
-        
-    </android.support.v4.view.ViewPager>
-
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
@@ -61,5 +53,13 @@
             android:textSize="20.0dip" />
     </LinearLayout>
 
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_dt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+        
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
