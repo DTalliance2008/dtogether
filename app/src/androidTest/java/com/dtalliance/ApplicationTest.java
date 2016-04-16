@@ -1,4 +1,4 @@
-package com.dtalliance.com.dtalliance;
+package com.dtalliance;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
