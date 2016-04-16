@@ -54,7 +54,7 @@ public class LoginActivity extends FragmentActivity {
 //					login(userName, "", passwd);
 //				}
 //				 goPager();
-//				goDT();
+				goDT();
 			}
 		});
 
@@ -151,9 +151,9 @@ public class LoginActivity extends FragmentActivity {
 //		}
 //	}
 //
-//	public void goDT(){
-//		Intent intent = new Intent(this, DTActivity.class);
-//		startActivity(intent);
-//	}
+	public void goDT(){
+		Intent intent = new Intent(this, DTActivity.class);
+		startActivity(intent);
+	}
 
 }

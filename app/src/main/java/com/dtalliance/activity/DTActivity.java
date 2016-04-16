@@ -12,6 +12,10 @@ import android.widget.TextView;
 import com.dtalliance.R;
 import com.dtalliance.adapter.DTab;
 import com.dtalliance.adapter.MyPagerAdapter;
+import com.dtalliance.fragment.IntroduceFragment;
+import com.dtalliance.fragment.NoteFragment;
+import com.dtalliance.fragment.PersistFragment;
+import com.dtalliance.fragment.ShareFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,10 +40,10 @@ public class DTActivity extends FragmentActivity implements ViewPager.OnPageChan
 
 		initTextViewList();
 		viewPager = (ViewPager) findViewById(R.id.vp_dt);
-//		tabList.add(new DTab(R.string.persist, PersistFragmentNew.class));
-//		tabList.add(new DTab(R.string.note, NoteFragmentNew.class));
-//		tabList.add(new DTab(R.string.sharedream, ShareFragmentNew.class));
-//		tabList.add(new DTab(R.string.my, IntroduceFragment.class));
+		tabList.add(new DTab(R.string.persist, PersistFragment.class));
+		tabList.add(new DTab(R.string.note, NoteFragment.class));
+		tabList.add(new DTab(R.string.sharedream, ShareFragment.class));
+		tabList.add(new DTab(R.string.my, IntroduceFragment.class));
 
 		viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), tabList));
 		viewPager.setOnPageChangeListener(this);
