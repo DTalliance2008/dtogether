@@ -52,5 +52,6 @@
     <string name="terminalDream">最终梦想</string>
     <string name="single">单次</string>
     <string name="search">search</string>
+    <string name="nocontent">您还没写日记呢，请写下今天的心情</string>
 
 </resources>

@@ -3,6 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tv_note_no_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nocontent"
+        android:visibility="invisible"/>
     <ListView
         android:id="@+id/lv_note_content"
         android:layout_width="wrap_content"

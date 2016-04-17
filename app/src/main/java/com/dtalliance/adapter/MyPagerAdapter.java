@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class MyPagerAdapter  extends FragmentPagerAdapter {
     private List<DTab> dtList;
+
     @Override
     public Fragment getItem(int position) {
         try {
@@ -31,8 +32,4 @@ public class MyPagerAdapter  extends FragmentPagerAdapter {
         this.dtList = dtList;
     }
 
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        return dtList.get(position).getTitle();
-//    }
 }

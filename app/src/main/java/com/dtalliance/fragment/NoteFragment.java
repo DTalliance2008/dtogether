@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dtalliance.R;
@@ -36,7 +37,7 @@ public class NoteFragment extends BaseFragment {
     private File filePath;
     private int count;
     private ListView noteContentLV;
-
+    private TextView noContentTv;
     private SimpleAdapter adapterNote = null;
 
     @Nullable
@@ -44,6 +45,7 @@ public class NoteFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_note, container, false);
         noteContentLV = (ListView) view.findViewById(R.id.lv_note_content);
+        noContentTv = (TextView) view.findViewById(R.id.tv_note_no_content);
         refreshItemView();
         return view;
     }
@@ -52,7 +54,7 @@ public class NoteFragment extends BaseFragment {
         new NoteBackground(getActivity()).execute();
     }
 
-    //后台进城
+    //background thread is used to read system files
     private class NoteBackground extends AsyncTaskWithProgressDialog {
 
         public NoteBackground(Context progressDialogContext) {
@@ -91,7 +93,10 @@ public class NoteFragment extends BaseFragment {
                         map.put("itemTitle", array[0]);
                     }
                     listItemNoteNew.add(map);
+
                 }
+            }else{
+                noContentTv.setVisibility(View.VISIBLE);
             }
 
             adapterNote = new SimpleAdapter(getActivity(), (List<HashMap<String, Object>>) listItemNoteNew,

@@ -10,6 +10,9 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import com.dtalliance.R;
+import com.dtalliance.util.ConstantUtil;
+import com.dtalliance.util.DBUtil;
+import com.dtalliance.util.SPUtil;
 
 public class MainActivity extends Activity {
 
@@ -34,6 +37,12 @@ public class MainActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 /* Create an Intent that will start the Main WordPress Activity. */
+                String isExistDB = SPUtil.getString(getApplicationContext(), ConstantUtil.IMPORT_DB_SP, "isExist");
+                isExistDB = "";
+                if(isExistDB == null || isExistDB.isEmpty()){
+                    DBUtil.getDataBasePath(getApplicationContext());
+                    SPUtil.setString(getApplicationContext(), ConstantUtil.IMPORT_DB_SP, "isExist", "data");
+                }
                 goLogin();
             }
         }, 2900); //2900 for release

@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.dtalliance.R;
@@ -26,18 +27,16 @@ public class DTActivity extends FragmentActivity implements ViewPager.OnPageChan
 	private List<DTab> tabList = new ArrayList<DTab>();
 	private List<TextView> textViewList = new ArrayList<>();
 	private ViewPager viewPager;
-	private int indexPager = 1;
+	private int preIndexPager = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dt);
-		
 		initAction();
 	}
 	
 	public void initAction(){
-
 		initTextViewList();
 		viewPager = (ViewPager) findViewById(R.id.vp_dt);
 		tabList.add(new DTab(R.string.persist, PersistFragment.class));
@@ -47,6 +46,22 @@ public class DTActivity extends FragmentActivity implements ViewPager.OnPageChan
 
 		viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), tabList));
 		viewPager.setOnPageChangeListener(this);
+		onTextViewChangeListener();
+	}
+
+	private void onTextViewChangeListener(){
+		if(textViewList != null){
+			for(int i=0;i<textViewList.size();i++){
+				final int p = i;
+				textViewList.get(i).setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						viewPager.setCurrentItem(p);
+						changeTextViewColor(p);
+					}
+				});
+			}
+		}
 	}
 
 	private void initTextViewList(){
@@ -59,6 +74,8 @@ public class DTActivity extends FragmentActivity implements ViewPager.OnPageChan
 		textViewList.add(note);
 		textViewList.add(share);
 		textViewList.add(intro);
+
+		persist.setTextColor(Color.RED);//first fragment is red, and other is blue
 	}
 
 

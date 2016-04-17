@@ -44,7 +44,7 @@ public class RemindData {
 	}
 	
 	public List<Remind> selectPersistData(String start, String end){
-		SQLiteDatabase db = helper.getWritableDatabase();
+		SQLiteDatabase db = helper.getReadableDatabase();
 		List<Remind> remindList = new LinkedList<Remind>();
 		Cursor cursor = null;
 		try {
@@ -67,7 +67,7 @@ public class RemindData {
 	}
 	
 	public List<Remind> selectAllData(){
-		SQLiteDatabase db = helper.getWritableDatabase();
+		SQLiteDatabase db = helper.getReadableDatabase();
 		List<Remind> remindList = new ArrayList<Remind>();
 		Cursor cursor = null;
 		try {
@@ -90,7 +90,7 @@ public class RemindData {
 	}
 	
 	public int countData(){
-		SQLiteDatabase db = helper.getWritableDatabase();
+		SQLiteDatabase db = helper.getReadableDatabase();
 		int count = -1;
 		try {
 			Cursor cursor = db.rawQuery("select count(*) from " + ConstantUtil.TABLE_REMIND, null);

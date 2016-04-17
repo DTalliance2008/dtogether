@@ -1,6 +1,8 @@
 package com.dtalliance.fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +15,11 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.dtalliance.R;
+import com.dtalliance.db.RemindData;
+import com.dtalliance.jsonObject.entry.Remind;
+import com.dtalliance.util.ConstantUtil;
+import com.dtalliance.util.DBUtil;
+import com.dtalliance.util.SPUtil;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -24,7 +31,7 @@ public class PersistFragment extends Fragment {
 	private ListView listView;
 	private static final int MSG_SUCCESS = 0;
 	private static final int MSG_FAILURE = 1;
-//	private LoadData loadData;
+	private LoadData loadData;
 	List<HashMap<String, Object>> listItem = new LinkedList<HashMap<String,Object>>();
 
 	private SimpleAdapter adapter;
@@ -37,8 +44,8 @@ public class PersistFragment extends Fragment {
 		if(listItem != null){
 			listItem.clear();
 		}
-//		loadData = new LoadData();
-//		loadData.start();
+		loadData = new LoadData();
+		loadData.start();
 
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -67,48 +74,45 @@ public class PersistFragment extends Fragment {
 //	}
 //
 //	@SuppressLint("HandlerLeak")
-//	private Handler handler = new Handler(){
-//
-//		@Override
-//		public void handleMessage(Message msg) {
-//			switch (msg.what) {
-//				case MSG_SUCCESS:
-//
-//					listView.setAdapter(adapter);
-////                Toast.makeText(getActivity(), "word success", Toast.LENGTH_LONG).show();
-//					break;
-//
-//				case MSG_FAILURE:
-//					Toast.makeText(getActivity(), "word failed", Toast.LENGTH_LONG).show();
-//					break;
-//			}
-//			super.handleMessage(msg);
-//		}
-//	};
-//
-//	private class LoadData extends Thread{
-//
-//		public void run(){
-//
-//			DBUtil.getDataBasePath(getActivity());
-//
-//			RemindData persistWord = new RemindData(getActivity());
-//			LinkedList<Remind> selectData = (LinkedList<Remind>) persistWord.selectPersistData("20", "30");
-//			for(int i=0; i<selectData.size(); i++){
-//				HashMap<String, Object> map = new HashMap<String, Object>();
-//				map.put("title", selectData.get(i).getTitle());
-//				map.put("context", selectData.get(i).getType());
-//				map.put("type", selectData.get(i).getType());
-//				map.put("url", selectData.get(i).getUrl());
-//				listItem.add(map);
-//			}
-//
-//			adapter = new SimpleAdapter(getActivity(), (List<HashMap<String, Object>>) listItem,
-//					R.layout.notelist, new String[]{"title", "context"},
-//					new int[] {R.id.tv_notelist_title1, R.id.tv_notelist_note1});
-//			Message message = new Message();
-//			message.what = MSG_SUCCESS;
-//			handler.sendMessage(message);
-//		}
-//	}
+	private Handler handler = new Handler(){
+
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+				case MSG_SUCCESS:
+
+					listView.setAdapter(adapter);
+//                Toast.makeText(getActivity(), "word success", Toast.LENGTH_LONG).show();
+					break;
+
+				case MSG_FAILURE:
+					Toast.makeText(getActivity(), "word failed", Toast.LENGTH_LONG).show();
+					break;
+			}
+			super.handleMessage(msg);
+		}
+	};
+
+	private class LoadData extends Thread{
+
+		public void run(){
+			RemindData persistWord = new RemindData(getActivity());
+			LinkedList<Remind> selectData = (LinkedList<Remind>) persistWord.selectPersistData("0", "10");
+			for(int i=0; i<selectData.size(); i++){
+				HashMap<String, Object> map = new HashMap<String, Object>();
+				map.put("title", selectData.get(i).getTitle());
+				map.put("context", selectData.get(i).getType());
+				map.put("type", selectData.get(i).getType());
+				map.put("url", selectData.get(i).getUrl());
+				listItem.add(map);
+			}
+
+			adapter = new SimpleAdapter(getActivity(), (List<HashMap<String, Object>>) listItem,
+					R.layout.notelist, new String[]{"title", "context"},
+					new int[] {R.id.tv_notelist_title1, R.id.tv_notelist_note1});
+			Message message = new Message();
+			message.what = MSG_SUCCESS;
+			handler.sendMessage(message);
+		}
+	}
 }

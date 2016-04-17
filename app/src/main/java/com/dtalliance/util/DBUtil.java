@@ -18,7 +18,8 @@ public class DBUtil {
 			String dbPath = ConstantUtil.DATA_PATH + ConstantUtil.DB_NAME;
 			
 			int size = 1024;
-			if(!(new File(dbPath)).exists()){
+			File fileDB = new File(dbPath);
+			if(fileDB == null ||  !fileDB.exists()){
 				File file = new File(ConstantUtil.DATA_PATH);
 				file.mkdir();
 				InputStream is = context.getResources().openRawResource(R.raw.yiqimeng);
@@ -34,9 +35,7 @@ public class DBUtil {
 				is.close();
 				return true;
 			}
-		} catch (NotFoundException e) {
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
+		}  catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();

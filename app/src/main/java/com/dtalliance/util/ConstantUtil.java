@@ -23,10 +23,10 @@ public class ConstantUtil {
 	public static final String TABLE_GROUP = "tb_group";
 	
 	//文件路径
-	public static final String FILE_PATH = "/data/data/com.dtaliance/files/";
-	public static final String FILE_SPEECH = "/data/data/com.dtaliance/files/";
+	public static final String FILE_PATH = "/data/data/com.dtalliance/files/";
+	public static final String FILE_SPEECH = "/data/data/com.dtalliance/files/";
 	public static final String SD_PATH = "files/";
-	public static final String DATA_PATH = "/data/data/com.dtaliance/databases/";
+	public static final String DATA_PATH = "/data/data/com.dtalliance/databases/";
 
 	//应用程序名称
 	public static final String APP_NAME = "dreamtogether";
@@ -84,4 +84,6 @@ public class ConstantUtil {
 	
 	public static final String USER_INFO = "userInfo";
 	public static final String USER_LEAGUER = "userLeaguer";
+
+	public static final String IMPORT_DB_SP = "import_db_sp";
 }
