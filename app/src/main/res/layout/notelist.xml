@@ -1,53 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/note_listview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/cd_listview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <RelativeLayout
-        android:id="@+id/diarylist_background"
+    <TextView
+        android:id="@+id/tv_notelist_icon1"
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:background="@mipmap/bad"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_notelist_title1"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_notelist_icon1"
+        android:text="今天的失败是明天的开始"
+        android:textSize="30dp" >
+    </TextView>
+    <TextView
+        android:id="@+id/tv_notelist_note1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="3dp">
-
-        <TextView
-            android:id="@+id/tv_notelist_icon1"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"/>
-
-        <TextView
-            android:id="@+id/tv_notelist_time1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:gravity="center"
-            android:text="11:11"
-            android:typeface="monospace" />
-
-        <TextView
-            android:id="@+id/tv_notelist_title1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/tv_notelist_time1"
-            android:layout_toRightOf="@id/tv_notelist_icon1"
-            android:gravity="center"
-            android:text="世界，你好"
-            android:textSize="18sp"
-            android:typeface="monospace" />
-
-        <TextView
-            android:id="@+id/tv_notelist_note1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_notelist_title1"
-            android:layout_toRightOf="@id/tv_notelist_icon1"
-            android:gravity="center"
-            android:text="就算你变了墨阳，就算我不在你身旁，你依然是我最爱的姑娘"
-            android:textColor="#999999"
-            android:textSize="14sp" />
-    </RelativeLayout>
+        android:layout_height="82dp"
+        android:layout_below="@+id/tv_notelist_title1"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_notelist_icon1"
+        android:text="2015年某年某月某天，由于我过于浮躁，造成今天的失败，我不甘心，但是我知道，这次失败是为了明天更好的成功"
+        android:textSize="25dp" >
+    </TextView>
+    <TextView
+        android:id="@+id/tv_notelist_time1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="2015-12-12"
+        android:textSize="25dp" >
+    </TextView>
 
 </RelativeLayout>
