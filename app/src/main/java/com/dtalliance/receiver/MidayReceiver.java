@@ -24,31 +24,33 @@ public class MidayReceiver extends BroadcastReceiver {
 	private PersistWord dataManager;
 	private Context context;
 	private final static int NOTIFICATION_ID = 1002;
-	private String miday = "�����";
+	private String miday = "中午好";
 	@Override
     public void onReceive(Context context, Intent intent) {
 		this.context = context;
 		showNotification();
 	}
 	
-	@SuppressWarnings({ "deprecation", "static-access" })
 	public void showNotification(){
-		Notification noCation = new Notification(R.mipmap.ic_launcher,
-				ConstantUtil.APP_NAME, System.currentTimeMillis());
-		String phrase = ConstantUtil.APP_NAME;
-		
 		dataManager = new PersistWord(context);
 		SharedPreferences sp = context.getSharedPreferences("dream", context.MODE_PRIVATE);
 		int count = sp.getInt("count", 0);
+		String phrase = ConstantUtil.APP_NAME;
 		if(count != 0){
 			phrase = dataManager.selectPersistData(Integer.toString(count), Integer.toString(count)).get(0).getKeyWord();
 		}
 
+		Notification.Builder builder = new Notification.Builder(context);
+		builder.setContentTitle(miday)
+			.setContentText(phrase)
+			.setSmallIcon(R.mipmap.ic_launcher);
+
+		Notification notification = builder.build();
 //		Intent yiqimengIntent = new Intent(context, ViewPagerActivity.class);
 //		PendingIntent penIntent = PendingIntent.getActivity(context, 0, yiqimengIntent, 0);
-//		noCation.setLatestEventInfo(context, miday, phrase, penIntent);
+//		notification.contentIntent = penIntent;
 		NotificationManager noCationManager = (NotificationManager) context.getSystemService(
 					android.content.Context.NOTIFICATION_SERVICE);
-		noCationManager.notify(NOTIFICATION_ID, noCation);
+		noCationManager.notify(NOTIFICATION_ID, notification);
 	}
 }

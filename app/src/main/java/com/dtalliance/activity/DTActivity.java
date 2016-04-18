@@ -1,5 +1,6 @@
 package com.dtalliance.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -118,7 +119,7 @@ public class DTActivity extends FragmentActivity implements ViewPager.OnPageChan
 	public boolean onOptionsItemSelected(MenuItem menuItem){
 		switch(menuItem.getItemId()){
 		case R.id.writeNote:
-//			goWriteNote();
+			goWriteNote();
 			return true;
 		case R.id.set_alert:
 //			goRemind();
@@ -135,11 +136,11 @@ public class DTActivity extends FragmentActivity implements ViewPager.OnPageChan
 //		startActivity(intent);
 //	}
 //
-//	public void goWriteNote(){
-//		Intent intent = new Intent(this, WriteNoteActivity.class);
-//		startActivity(intent);
-//	}
-//
+	public void goWriteNote(){
+		Intent intent = new Intent(this, WriteNoteActivity.class);
+		startActivity(intent);
+	}
+
 //	public void goRemind(){
 //		Intent intent = new Intent(this, RemindActivity.class);
 //		startActivity(intent);

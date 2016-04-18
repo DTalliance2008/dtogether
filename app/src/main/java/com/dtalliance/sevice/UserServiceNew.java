@@ -11,11 +11,9 @@ import com.dtalliance.util.UserApplication;
 
 public class UserServiceNew {
 	private UserApplication user;
-	private HttpDownloader httpDownloader;
-	   
+
 	public UserServiceNew(Application application){
 		user = (UserApplication) application;
-		httpDownloader = new HttpDownloader();
 	}
 	
 	public String getRegist(String userName, String email, String passwd,
@@ -30,15 +28,12 @@ public class UserServiceNew {
 		StringBuffer upString = new StringBuffer("param=");
 		upString.append(JSON.toJSON(userInfo));
 		
-		String httpUrl = ConstantUtil.URLPATH + "exeAdd_user.action?";
-		
-		String downloadString = httpDownloader.DownloadString(httpUrl, upString.toString());
+		String httpUrl = ConstantUtil.URL_PATH + "exeAdd_user.action?";
+		String downloadString = HttpDownloader.DownloadString(httpUrl, upString.toString());
 
 		if (downloadString != null) {
-
 			UIModel model = JSON.parseObject(downloadString, UIModel.class);
-			
-			if (ConstantUtil.SUCCESS.equals(model.getStatus())) { 
+			if (ConstantUtil.SUCCESS.equals(model.getStatus())) {
 				 user.setSessionID((String)model.getData());
 				 user.setUserName(userName);
 				 user.setEmail(email);
@@ -54,8 +49,8 @@ public class UserServiceNew {
 		userInfo.setLoginName(loginName);
 		userInfo.setPassword(password);
 		
-		String downloadString = httpDownloader.DownloadString(
-				ConstantUtil.URLPATH + "exeLogin_user.action?param=", JSON.toJSONString("a")) ;
+		String downloadString = HttpDownloader.DownloadString(
+				ConstantUtil.URL_PATH + "exeLogin_user.action?param=", JSON.toJSONString("a")) ;
 		
 		if(downloadString != null){
 			UIModel model = JSON.parseObject(downloadString, UIModel.class);

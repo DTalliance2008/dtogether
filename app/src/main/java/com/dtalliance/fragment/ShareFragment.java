@@ -24,7 +24,7 @@ public class ShareFragment extends Fragment {
 
 	private static final int MSG_SUCCESS = 0;
 	private static final int MSG_FAILURE = 1;
-//	private DownDream downDream;
+	private DownDream downDream;
 	List<HashMap<String, Object>> listItem = new ArrayList<HashMap<String,Object>>();
 	private SimpleAdapter adapter;
 
@@ -34,50 +34,48 @@ public class ShareFragment extends Fragment {
 		View view = inflater.inflate(R.layout.fragment_share, container, false);
 		listView = (ListView) view.findViewById(R.id.lv_dream_item);
 
-//		setListViewItem();
-
+		setListViewItem();
 		return view;
 	}
 
-//	private void setListViewItem() {
-//		if(!listItem.isEmpty()){
-//			listItem.clear();
-//		}
-//		downDream = new DownDream();
-//		downDream.start();
-//	}
+	private void setListViewItem() {
+		if(!listItem.isEmpty()){
+			listItem.clear();
+		}
+		downDream = new DownDream();
+		downDream.start();
+	}
 
-//	@SuppressLint("HandlerLeak")
-//	private Handler handler = new Handler(){
-//		public void handleMessage(Message msg) {
-//			switch (msg.what) {
-//				case MSG_SUCCESS:
-//					listView.setAdapter(adapter);
-//					break;
-//				case MSG_FAILURE:
-//					Toast.makeText(getActivity(), "word failed", Toast.LENGTH_LONG).show();
-//					break;
-//			}
-//			super.handleMessage(msg);
-//		};
-//	};
+	@SuppressLint("HandlerLeak")
+	private Handler handler = new Handler(){
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+				case MSG_SUCCESS:
+					listView.setAdapter(adapter);
+					break;
+				case MSG_FAILURE:
+					Toast.makeText(getActivity(), "word failed", Toast.LENGTH_LONG).show();
+					break;
+			}
+			super.handleMessage(msg);
+		};
+	};
 
+	private class DownDream extends Thread{
+		@Override
+		public void run() {
 
-//	private class DownDream extends Thread{
-//		@Override
-//		public void run() {
-//
-//			HashMap<String, Object> map = new HashMap<String, Object>();
-//			map.put("title", "早上");
-//			map.put("context", "hello");
-//			listItem.add(map);
-//			adapter = new SimpleAdapter(getActivity(), (List<HashMap<String, Object>>) listItem,
-//					R.layout.notelist, new String[]{"title", "context"},
-//					new int[] {R.id.tv_notelist_title1, R.id.tv_notelist_note1});
-//			Message message = new Message();
-//			message.what = MSG_SUCCESS;
-//			handler.sendMessage(message);
-//		}
-//	}
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			map.put("title", "早上");
+			map.put("context", "hello");
+			listItem.add(map);
+			adapter = new SimpleAdapter(getActivity(), (List<HashMap<String, Object>>) listItem,
+					R.layout.notelist, new String[]{"title", "context"},
+					new int[] {R.id.tv_notelist_title1, R.id.tv_notelist_note1});
+			Message message = new Message();
+			message.what = MSG_SUCCESS;
+			handler.sendMessage(message);
+		}
+	}
 
 }

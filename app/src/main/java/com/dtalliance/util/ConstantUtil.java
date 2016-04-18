@@ -34,9 +34,10 @@ public class ConstantUtil {
 	//
 	public static final String SUCCESS = "success";
 	public static final String FAILED = "failed";
-	
+	public static final String NO_DATA = "no data";
+
 	//server 地址
-	public static final String URLPATH = "http://192.168.0.237:8080/cloudMarket/system/";
+	public static final String URL_PATH = "http://192.168.0.237:8080/cloudMarket/system/";
 
 	public static final String FRIST_LEVEL = "firstLevel"; 
 	public static final String MIDDLE_LEVEL = "middleLevel"; 

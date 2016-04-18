@@ -25,7 +25,7 @@ public class fileUtil {
 	public fileUtil(String path){
 		SDPATH = path;
 	}
-	//�������ļ�
+
 	public File createFile(String fileName){
 		try {
 			File file = new File(SDPATH + fileName); 
@@ -37,27 +37,22 @@ public class fileUtil {
 		}
 	}
 	
-	//�����ļ���
 	public File createDir(String dirName){
 		File dir = new File(SDPATH + dirName);
 		dir.mkdir();
 		return dir; 
 	}
 	
-	//�ж��ļ�����
 	public boolean isFileExist(String fileName){
 		File file = new File(SDPATH + fileName);
 		return file.exists();
 	}
 	
-	
-	//�����д���ļ���
 	public boolean writeSD(String dir, String fileName, InputStream inputStream){
 		boolean flag = false;
 		OutputStream outputStream=null;
 		File file;
 		try {
-			
 //			createDir(dir);
 			if(!isFileExist(dir+fileName)){
 				file = createFile(dir+fileName);
@@ -85,7 +80,6 @@ public class fileUtil {
 		return flag;
 	}
 	
-	//��ȡ�ļ��е����
 	public String ReadFile(String path){
 		String content = null;
 		try{

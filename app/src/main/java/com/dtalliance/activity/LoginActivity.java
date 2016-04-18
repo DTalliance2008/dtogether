@@ -103,6 +103,7 @@ public class LoginActivity extends FragmentActivity {
 //
 //	}
 //
+
 //	private class LoginInBackground extends AsyncTaskWithProgressDialog {
 //
 //		public LoginInBackground(Context progressDialogContext) {

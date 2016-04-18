@@ -102,6 +102,7 @@ public class StoreFileToSD {
 					content.append(line);
 				}		
 				br.close();
+				return content.toString();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

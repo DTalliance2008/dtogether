@@ -1,5 +1,6 @@
 package com.dtalliance.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,11 +16,9 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.dtalliance.R;
+import com.dtalliance.activity.OpenVideoActivity;
 import com.dtalliance.db.RemindData;
 import com.dtalliance.jsonObject.entry.Remind;
-import com.dtalliance.util.ConstantUtil;
-import com.dtalliance.util.DBUtil;
-import com.dtalliance.util.SPUtil;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -57,7 +56,7 @@ public class PersistFragment extends Fragment {
 				Log.i("click", (String) listItem.get(arg2).get("title"));
 				String url = (String) listItem.get(arg2).get("url");
 				if(url != null){
-//					goVideo(url);
+					goVideo(url);
 				}else{
 					Toast.makeText(getActivity(), "不能打开文字", Toast.LENGTH_SHORT).show();
 				}
@@ -67,12 +66,12 @@ public class PersistFragment extends Fragment {
 		return view;
 	}
 
-//	public void goVideo(String url){
-//		Intent intent = new Intent(getActivity(), OpenVideoActivity.class);
-//		intent.putExtra("openurl", url);
-//		startActivity(intent);
-//	}
-//
+	public void goVideo(String url){
+		Intent intent = new Intent(getActivity(), OpenVideoActivity.class);
+		intent.putExtra("openurl", url);
+		startActivity(intent);
+	}
+
 //	@SuppressLint("HandlerLeak")
 	private Handler handler = new Handler(){
 

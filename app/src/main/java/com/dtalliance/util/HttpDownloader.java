@@ -20,36 +20,7 @@ import android.util.Log;
 import com.dtalliance.file.StoreFileToSD;
 
 public class HttpDownloader {
-
-	public String download(String httpUrl, String upString){
-//		HttpClient httpClient = new DefaultHttpClient();
-//		List<BasicNameValuePair> params = new LinkedList<BasicNameValuePair>();
-//		params.add(new BasicNameValuePair("param", upString));
-//
-//		String param = URLEncodedUtils.format(params, "utf-8");
-//
-//		try {
-//			HttpPost postMethod = new HttpPost(httpUrl + upString);
-//			postMethod.setEntity(new UrlEncodedFormEntity(params, "utf-8"));
-//			HttpResponse httpResponse = httpClient.execute(postMethod);
-//			Log.i("test", "resCode = " + httpResponse.getStatusLine().getStatusCode());
-//			Log.i("test", "res = " + EntityUtils.toString(httpResponse.getEntity(), "utf-8"));
-//			return EntityUtils.toString(httpResponse.getEntity(), "utf-8");
-//		} catch (UnsupportedEncodingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (ClientProtocolException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		return null;
-
-	}
-
-	public String DownloadString(String httpUrl, String uploadString) {
+	public static String DownloadString(String httpUrl, String uploadString) {
 		String downString = "";
 		try {
 			URL url = new URL(httpUrl);
@@ -62,7 +33,7 @@ public class HttpDownloader {
 		return downString;
 	}
 
-	public byte[] DownloadBytes(URL httpUrl, byte[] upBytes) {
+	public static byte[] DownloadBytes(URL httpUrl, byte[] upBytes) {
 		int TimeOut = 250;
 		HttpURLConnection urlConnection = null;
 		try {
@@ -113,14 +84,13 @@ public class HttpDownloader {
 		return null;
 	}
 
-	public String downloadFile(String urlStr, String fileName) {
+	public static String downloadFile(String urlStr, String fileName) {
 		String line = "";
 		StringBuffer sb = new StringBuffer();
 
 		try {
 			URL url = new URL(urlStr);
 
-			// ����һ��http����
 			HttpURLConnection connection = (HttpURLConnection) url
 					.openConnection();
 			connection.setRequestMethod("POST");
@@ -131,7 +101,6 @@ public class HttpDownloader {
 			connection.setRequestProperty("Content-Type",
 					"application/x-www-form-urlencoded");
 
-			// IO��ȡ���
 			InputStream inputStream = connection.getInputStream();
 
 

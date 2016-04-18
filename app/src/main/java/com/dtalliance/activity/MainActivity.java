@@ -38,7 +38,6 @@ public class MainActivity extends Activity {
             public void run() {
                 /* Create an Intent that will start the Main WordPress Activity. */
                 String isExistDB = SPUtil.getString(getApplicationContext(), ConstantUtil.IMPORT_DB_SP, "isExist");
-                isExistDB = "";
                 if(isExistDB == null || isExistDB.isEmpty()){
                     DBUtil.getDataBasePath(getApplicationContext());
                     SPUtil.setString(getApplicationContext(), ConstantUtil.IMPORT_DB_SP, "isExist", "data");
