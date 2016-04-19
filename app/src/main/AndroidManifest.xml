@@ -30,6 +30,16 @@
             android:theme="@style/Widget.AppCompat.Toolbar"/>
         <activity android:name=".activity.OutputNoteActivity"/>
         <activity android:name=".activity.OpenVideoActivity"/>
+        <activity android:name=".activity.DreamVersusActivity"/>
+        <activity android:name=".activity.LaunchVsActivity"/>
+        <activity android:name=".activity.TeamDreamActivity"/>
+        <activity android:name=".activity.DreamTreeActivity"/>
+        <activity android:name=".activity.TaskActivity"/>
+        <activity android:name=".activity.TeamCreateActivity"/>
+        <activity android:name=".activity.TaskDetailActivity"/>
+        <activity android:name=".activity.TeamTaskActivity"/>
+        <activity android:name=".activity.TeamTaskAddActivity"/>
+        <activity android:name=".activity.RegistActivity"/>
     </application>
 
 </manifest>

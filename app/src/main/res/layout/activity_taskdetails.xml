@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/task_background">
+
+    <RelativeLayout
+        android:id="@+id/rl_taskdetails_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/task_background_div"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+        <!-- 标题 -->
+
+
+        <TextView
+            android:id="@+id/tv_taskdetails_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务名称："
+            android:textSize="18sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_taskdetails_tittlecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_taskdetails_tittle"
+            android:ellipsize="end"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="请学姐吃饭"
+            android:textColor="#0099cc"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bt_taskdetails_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_taskdetails_tittle"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/task_background_line" />
+
+        <!--     任务权重                   任务权重                   任务权重                     任务权重                   任务权重                     任务权重                     任务权重                     任务权重                     任务权重                任务权重  -->
+
+        <TextView
+            android:id="@+id/tv_taskdetails_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_taskdetails_line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务权重:"
+            android:textColor="#ff6666"
+            android:textSize="18sp"
+
+            />
+
+        <TextView
+            android:id="@+id/et_taskdetails_priorityone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_taskdetails_line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tv_taskdetails_priority"
+            android:text="45%"
+            android:textColor="#ff6666"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_taskdetails_lineone"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_taskdetails_priority"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/task_background_line" />
+        <!-- 任务二 -->
+        <TextView
+            android:id="@+id/tv_taskdetails_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_taskdetails_lineone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务进度："
+            android:textColor="#ff6666"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_taskdetails_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_taskdetails_lineone"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/tv_taskdetails_pro"
+            android:background="@drawable/homepage_tv"
+            android:text="76%"
+            android:textColor="#ff6666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bt_taskdetails_linetwo"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_taskdetails_pro"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/task_background_line" />
+
+
+        <TextView
+            android:id="@+id/tv_taskdetails_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_taskdetails_linetwo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务角色："
+            android:textColor="#ff6666"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_taskdetails_roleshow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_taskdetails_role"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="张三："
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_taskdetails_rolepriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_taskdetails_role"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_taskdetails_roleshow"
+            android:background="@drawable/homepage_tv"
+            android:text="46%"
+            android:textColor="#ff6666"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

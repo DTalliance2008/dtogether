@@ -62,35 +62,22 @@ public class LoginActivity extends FragmentActivity {
 
 			@Override
 			public void onClick(View arg0) {
-//				goRegist();
-//				goCreateDream();
+				goRegist();
 			}
 		});
 	}
-//	public void goCreateDream() {
-//		Intent intent = new Intent(this, CreateDreamActivity.class);
-//		startActivity(intent);
-//		finish();
-//	}
-//
-//	public void goRegist() {
-//		Intent intent = new Intent(this, RegistActivity.class);
-//		startActivity(intent);
-//		finish();
-//	}
-//
-//	public void goNote() {
-//		Intent intent = new Intent(this, NoteActivity.class);
-//		startActivity(intent);
-//		finish();
-//	}
-//
-//	public void goPager() {
-//		Intent intent = new Intent(this, PagerActivity.class);
-//		startActivity(intent);
-//		finish();
-//	}
-//
+	public void goCreateDream() {
+		Intent intent = new Intent(this, CreateDreamActivity.class);
+		startActivity(intent);
+		finish();
+	}
+
+	public void goRegist() {
+		Intent intent = new Intent(this, RegistActivity.class);
+		startActivity(intent);
+		finish();
+	}
+
 //	public void login(String username, String registEmail, String passwd) {
 //		NetworkService networkService = new NetworkService(getApplicationContext());
 //		if(networkService.isConnected() || networkService.isWifiConnected()){

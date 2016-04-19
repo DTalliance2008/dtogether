@@ -1,0 +1,335 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--横线一 -->
+    <TextView
+        android:id="@+id/tv_teamdream_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"/>
+       <!-- android:background="@drawable/homepage_line" -->
+    <!--头像一 -->
+    <TextView
+        android:id="@+id/tv_teamdream_teamicon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_teamdream_line"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp" />
+       <!-- android:background="@mipmap/teamicon"-->
+
+    <TextView
+        android:id="@+id/tv_teamdream_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_line"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_teamicon"
+        android:text="武林第一联盟"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_terminaldreamm"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_teamdream_name"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_teamdream_teamicon"
+        android:gravity="left"
+        android:text="最终梦想："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_terminaldream"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_teamdream_name"
+        android:layout_toRightOf="@+id/tv_teamdream_terminaldreamm"
+        android:background="@drawable/homepage_bt"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="我想成为一名歌唱家"
+        android:textColor="#ff9900"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_middledreamm"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_teamdream_terminaldream"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_teamdream_teamicon"
+        android:gravity="left"
+        android:text="中期梦想："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_middledream"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_teamdream_terminaldream"
+        android:layout_toRightOf="@+id/tv_teamdream_middledreamm"
+        android:background="@drawable/homepage_bt"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="会唱一首歌"
+        android:textColor="#ff9900"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_firstdreamt"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_teamdream_middledream"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_teamdream_teamicon"
+        android:gravity="left"
+        android:text="初级梦想："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_firstdream"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tv_teamdream_middledream"
+        android:layout_toRightOf="@+id/tv_teamdream_firstdreamt"
+        android:background="@drawable/homepage_bt"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="读懂五线谱"
+        android:textColor="#ff9900"
+        android:textSize="16sp" />
+    <!--横线一 -->
+    <TextView
+        android:id="@+id/tv_teamdream_lineone"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_teamdream_firstdream"
+        android:layout_marginTop="5dp" />
+        <!--android:background="@drawable/homepage_line"-->
+
+    <!--我的任务一 -->
+    <TextView
+        android:id="@+id/tv_teamdream_mytask"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_teamdream_lineone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="团队任务"
+        android:textSize="18sp" />
+       <!-- android:background="@drawable/homepage_tv"-->
+
+    <TextView
+        android:id="@+id/tv_teamdream_taskone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_lineone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_mytask"
+        android:text="吃完一天的饭"
+        android:textColor="#ff6666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_tasktwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_taskone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tv_teamdream_mytask"
+        android:text="喝完一天的水"
+        android:textColor="#ff6666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_taskthree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_tasktwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tv_teamdream_mytask"
+        android:text="唱一天的歌"
+        android:textColor="#ff6666"
+        android:textSize="16sp" />
+    <!--横线一 -->
+    <TextView
+        android:id="@+id/tv_teamdream_linetwo"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_teamdream_mytask"
+        android:layout_marginTop="5dp"/>
+        <!--android:background="@drawable/homepage_line" -->
+    <!--团队的比梦台一 -->
+    <Button
+        android:id="@+id/tv_teamdream_myteambattle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_teamdream_linetwo"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="我的团队比梦台"
+        android:textSize="18sp" />
+        <!--android:background="@drawable/homepage_tv"-->
+
+    <TextView
+        android:id="@+id/tv_teamdream_mypro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_linetwo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteambattle"
+        android:text="我方团队进度："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_myprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_linetwo"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/tv_teamdream_mypro"
+        android:text="34%"
+        android:textColor="#ff6666"
+        android:textSize="14sp" />
+<!--
+    android:background="@drawable/homepage_tv"
+-->
+
+    <TextView
+        android:id="@+id/tv_teamdream_enemypro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_myprogress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteambattle"
+        android:text="对手团队进度："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_enemyproprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_myprogress"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/tv_teamdream_enemypro"
+        android:text="88%"
+        android:textColor="#ff6666"
+        android:textSize="14sp" />
+    <!--android:background="@drawable/homepage_tv"    -->
+    <!--横线一 -->
+    <TextView
+        android:id="@+id/tv_teamdream_linethree"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_teamdream_myteambattle"
+        android:layout_marginTop="5dp"/>
+        <!--android:background="@drawable/homepage_line" -->
+
+
+    <!--    角色任务 -->
+    <Button
+        android:id="@+id/tv_teamdream_myteamtask"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tv_teamdream_linethree"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="我的团队任务"
+        android:textSize="18sp" />
+    <!--android:background="@drawable/homepage_tv"-->
+    <TextView
+        android:id="@+id/tv_teamdream_myteampro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_linethree"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteamtask"
+        android:text="团队任务一："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_myteamprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_linethree"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteampro"
+        android:text="34%"
+        android:textColor="#ff6666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_myteamtasktwopro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_myteamprogress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteamtask"
+        android:text="团队任务二："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_myteamtasktwoprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_myteamprogress"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteamtasktwopro"
+        android:text="88%"
+        android:textColor="#ff6666"
+        android:textSize="14sp" />
+    <!--android:background="@drawable/homepage_tv"-->
+
+    <TextView
+        android:id="@+id/tv_teamdream_myteamtaskhreepro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_myteamtasktwopro"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteamtask"
+        android:text="团队任务三："
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_teamdream_myteamtaskhreeprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_teamdream_myteamtasktwoprogress"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/tv_teamdream_myteamtaskhreepro"
+        android:text="28%"
+        android:textColor="#ff6666"
+        android:textSize="14sp" />
+   <!-- android:background="@drawable/homepage_tv"-->
+
+    <TextView
+        android:id="@+id/tv_teamdream_linefour"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_teamdream_myteamtask"
+        android:layout_marginTop="5dp"/>
+        <!--android:background="@drawable/homepage_line" -->
+</RelativeLayout>

@@ -54,4 +54,6 @@
     <string name="search">search</string>
     <string name="nocontent">您还没写日记呢，请写下今天的心情</string>
 
+    <string name="passwdNotEqual">两次的password不相同，请重新输入</string>
+    <string name="emailError">email格式不正确，请重新输入</string>
 </resources>
