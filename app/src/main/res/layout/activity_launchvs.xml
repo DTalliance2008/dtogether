@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.LaunchVsActivity">
+    android:background="@mipmap/dream_background"
+    tools:context=".activity.LaunchVsActivity" >
 
 
     <RelativeLayout
@@ -25,15 +26,19 @@
             android:id="@+id/tv_launchvs_myicon"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/men"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp" />
-
+            />
         <TextView
             android:id="@+id/tv_launchvs_vs"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="5dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp" />
+            android:background="@mipmap/launchvs"
+
+            />
 
 
         <!-- 对手 -->
@@ -41,8 +46,10 @@
             android:id="@+id/bt_launchvs_enemy"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginTop="10dp"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp" />
+            android:background="@mipmap/add"
+            />
 
 
     </RelativeLayout>
