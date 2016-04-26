@@ -1,13 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
     <!--横线一 -->
     <TextView
         android:id="@+id/tv_homepage_line"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginTop="5dp"
+        android:background="@drawable/homepage_line"
         />
     <!--头像一 -->
     <ImageButton
@@ -16,6 +20,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
+        android:background="@mipmap/dream_myicon"
         android:layout_below="@+id/tv_homepage_line"
         />
     <TextView
@@ -42,6 +47,7 @@
         />
     <TextView
         android:id="@+id/tv_homepage_dream"
+        android:background="@drawable/homepage_bt"
         android:layout_width="wrap_content"
         android:singleLine="true"
         android:ellipsize="end"
@@ -61,11 +67,12 @@
         android:layout_height="2dp"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/ib_homepage_myicon"
-        />
+        android:background="@drawable/homepage_line"  />
 
     <!--我的任务一 -->
     <TextView
         android:id="@+id/tv_homepage_mytask"
+        android:background="@drawable/homepage_tv"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
@@ -118,10 +125,11 @@
         android:layout_height="2dp"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/tv_homepage_mytask"
-         />
+        android:background="@drawable/homepage_line"  />
     <!--我的比梦台一 -->
     <Button
         android:id="@+id/bt_homepage_mybattle"
+        android:background="@drawable/homepage_tv"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
@@ -146,6 +154,7 @@
         android:id="@+id/tv_homepage_myprogress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/homepage_tv"
         android:textSize="14sp"
         android:layout_toRightOf="@+id/tv_homepage_mypro"
         android:layout_below="@+id/tv_homepage_linetwo"
@@ -169,6 +178,7 @@
         android:id="@+id/tv_homepage_enemyprogress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/homepage_tv"
         android:textSize="14sp"
         android:layout_toRightOf="@+id/tv_homepage_enemypro"
         android:layout_below="@+id/tv_homepage_myprogress"
@@ -185,11 +195,12 @@
         android:layout_height="2dp"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/bt_homepage_mybattle"
-        />
+        android:background="@drawable/homepage_line"  />
 
     <!--       我    的   团    队     -->
     <ImageButton
         android:id="@+id/ib_homepage_myteam"
+        android:background="@mipmap/teamicon"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
@@ -220,6 +231,7 @@
         android:layout_marginTop="5dp"
         android:textColor="#ccccff"
         android:layout_alignParentRight="true"
+        android:background="@drawable/homepage_circle"
         android:textSize="14sp"
         android:layout_below="@+id/tv_homepage_linethree"
         android:text="编辑"
@@ -244,6 +256,7 @@
         android:id="@+id/tv_homepage_myteamdream"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
+        android:background="@drawable/homepage_bt"
         android:textSize="16sp"
         android:layout_toRightOf="@+id/tv_homepage_myteamdreamm"
         android:layout_below="@+id/tv_homepage_myteamname"
@@ -268,6 +281,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@drawable/homepage_tv"
         android:textSize="14sp"
         android:layout_toRightOf="@+id/tv_homepage_myteamdreamtaskpro"
         android:layout_below="@+id/tv_homepage_myteamdream"
@@ -281,6 +295,6 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/ib_homepage_myteam" />
-        <!--android:background="@drawable/homepage_line"-->
-</LinearLayout>
+        android:layout_below="@+id/ib_homepage_myteam"
+        android:background="@drawable/homepage_line"  />
+</RelativeLayout>

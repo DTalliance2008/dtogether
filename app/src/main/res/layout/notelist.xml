@@ -4,7 +4,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
-
+    <!--横线一 -->
+    <TextView
+        android:id="@+id/tv_notelist_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/homepage_line"
+        />
     <TextView
         android:id="@+id/tv_notelist_icon1"
         android:layout_width="60dp"
@@ -12,23 +19,24 @@
         android:background="@mipmap/bad"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+      >
     </TextView>
 
     <TextView
         android:id="@+id/tv_notelist_title1"
-        android:layout_width="400dp"
+        android:layout_width="360dp"
         android:layout_height="20dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_notelist_line"
         android:layout_toRightOf="@+id/tv_notelist_icon1"
         android:text="今天的失败是明天的开始"
         android:textSize="16sp" >
     </TextView>
     <TextView
         android:id="@+id/tv_notelist_note1"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
+        android:layout_width="360dp"
+        android:layout_height="20dp"
         android:layout_below="@+id/tv_notelist_title1"
         android:layout_marginBottom="18dp"
         android:layout_marginLeft="5dp"
