@@ -20,7 +20,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
-        android:background="@mipmap/dream_myicon"
+        android:background="@mipmap/boy"
         android:layout_below="@+id/tv_homepage_line"
         />
     <TextView
@@ -30,8 +30,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
         android:textSize="18sp"
+
         android:layout_toRightOf="@+id/ib_homepage_myicon"
         android:layout_below="@+id/tv_homepage_line"
+        android:textColor="#663300"
         android:text="天天爱睡觉"
         />
     <TextView
@@ -41,6 +43,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
+        android:textColor="#ff6666"
         android:layout_toRightOf="@+id/ib_homepage_myicon"
         android:layout_below="@+id/tv_homepage_name"
         android:text="我的梦想："
@@ -72,7 +75,7 @@
     <!--我的任务一 -->
     <TextView
         android:id="@+id/tv_homepage_mytask"
-        android:background="@drawable/homepage_tv"
+        android:background="@mipmap/hardwork"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
@@ -148,6 +151,7 @@
         android:textSize="16sp"
         android:layout_toRightOf="@+id/bt_homepage_mybattle"
         android:layout_below="@+id/tv_homepage_linetwo"
+        android:textColor="#ff6666"
         android:text="我的进度："
         />
     <TextView
@@ -171,6 +175,7 @@
         android:layout_marginTop="5dp"
         android:textSize="16sp"
         android:layout_toRightOf="@+id/bt_homepage_mybattle"
+        android:textColor="#ff6666"
         android:layout_below="@+id/tv_homepage_myprogress"
         android:text="对手进度："
         />
@@ -200,7 +205,7 @@
     <!--       我    的   团    队     -->
     <ImageButton
         android:id="@+id/ib_homepage_myteam"
-        android:background="@mipmap/teamicon"
+        android:background="@mipmap/team"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="5dp"
@@ -219,6 +224,7 @@
         android:layout_toRightOf="@+id/ib_homepage_myteam"
         android:layout_toLeftOf="@+id/bt_homepage_myteamedit"
         android:layout_below="@+id/tv_homepage_linethree"
+        android:textColor="#663300"
         android:text="宇宙第一战队"
         />
 
@@ -244,6 +250,7 @@
         android:layout_height="20dp"
         android:textSize="16sp"
         android:layout_toRightOf="@+id/ib_homepage_myteam"
+        android:textColor="#ff6666"
         android:layout_below="@+id/tv_homepage_myteamname"
         android:text="团队梦想："
         android:gravity="left"
@@ -262,7 +269,7 @@
         android:layout_below="@+id/tv_homepage_myteamname"
         android:text="打造第一社交平台"
         android:gravity="left"
-        android:textColor="#ff9900"
+        android:textColor="#663366"
         android:layout_marginTop="5dp"
         />
     <TextView
@@ -274,6 +281,7 @@
         android:textSize="16sp"
         android:layout_toRightOf="@+id/ib_homepage_myteam"
         android:layout_below="@+id/tv_homepage_myteamdreamm"
+        android:textColor="#ff6666"
         android:text="团队进度："
         />
     <TextView
