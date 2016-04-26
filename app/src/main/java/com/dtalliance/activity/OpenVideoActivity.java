@@ -89,14 +89,9 @@ public class OpenVideoActivity extends Activity{
         return false;//super.onKeyDown(keyCode, event); 
     }
 	
-//	public void goMainActivity(){
-//		Intent intent = new Intent(this, MainActivity.class);
-//		startActivity(intent);
-//		finish();
-//	}
-
 	public void goDTActivity(){
-		Intent intent = new Intent(this, DTActivity.class);
-		startActivity(intent);
+//		Intent intent = new Intent(this, DTActivity.class);
+//		startActivity(intent);
+        finish();
 	}
 }
