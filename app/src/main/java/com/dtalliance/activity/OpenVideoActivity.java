@@ -52,11 +52,11 @@ public class OpenVideoActivity extends Activity{
 			if(webview.canGoBack()){
 				webview.goBack();
 			} else {
-				goMainActivity(); 
+				goDTActivity();
 			}
 			break;
 		case R.id.exitVideo:
-			goMainActivity();
+			goDTActivity();
 			break;
 		default:
 			break;
@@ -79,19 +79,24 @@ public class OpenVideoActivity extends Activity{
         		if(mWebBackForwardList.getCurrentIndex() > 0){
 					String historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()-1).getUrl();
         		}
-//        		 webview.goBack(); 
-        		goMainActivity();
+        		 webview.goBack();
+//        		goMainActivity();
 				return true;
         	} else {
-    			goMainActivity();
-        	}      	
+				goDTActivity();
+        	}
         } 
         return false;//super.onKeyDown(keyCode, event); 
     }
 	
-	public void goMainActivity(){
-		Intent intent = new Intent(this, MainActivity.class);
+//	public void goMainActivity(){
+//		Intent intent = new Intent(this, MainActivity.class);
+//		startActivity(intent);
+//		finish();
+//	}
+
+	public void goDTActivity(){
+		Intent intent = new Intent(this, DTActivity.class);
 		startActivity(intent);
-		finish();
 	}
 }
